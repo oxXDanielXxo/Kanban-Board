@@ -1,0 +1,101 @@
+/* Reset básico para limpar as margens do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e2f; /* Fundo escuro corporativo */
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2a2a40;
+    border-bottom: 3px solid #6c5ce7;
+}
+
+/* O Quadro principal */
+.kanban-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    align-items: flex-start; /* Impede que as colunas estiquem desnecessariamente */
+}
+
+/* O formato das Colunas */
+.kanban-column {
+    background-color: #2d2d44;
+    border-radius: 8px;
+    width: 320px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.kanban-column h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4a4a6a;
+    text-align: center;
+}
+
+/* O espaço onde os cartões ficam */
+.task-list {
+    min-height: 50px; /* Espaço mínimo para conseguirmos soltar um item quando a coluna estiver vazia */
+}
+
+/* O design dos Cartões (Tarefas) */
+.task {
+    background-color: #4a4a6a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: grab; /* Muda o cursor do mouse para a 'mãozinha' */
+    border-left: 4px solid #6c5ce7;
+    transition: transform 0.1s ease;
+}
+
+.task:active {
+    cursor: grabbing; /* Mãozinha fechada quando está segurando */
+    transform: scale(1.02); /* Dá um leve zoom quando você segura o cartão */
+}
+
+/* Design do Painel de Controle */
+.control-panel {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#new-task-input {
+    padding: 10px 15px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #3b3b5c;
+    color: white;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+}
+
+#add-task-btn:hover {
+    background-color: #5849c4;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Kanban do CEO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+ <header>
+        <h1>🎯 Central de Operações (Kanban)</h1>
+    </header>
+
+    <!-- O Painel de Controle agora fica FORA do quadro, livre do Flexbox -->
+    <div class="control-panel" style="margin-top: 30px;">
+        <input type="text" id="new-task-input" placeholder="Digite a nova missão...">
+        <button id="add-task-btn">Adicionar</button>
+    </div>
+
+    <!-- O Quadro (Flexbox) começa aqui e cuida apenas das colunas -->
+    <main class="kanban-board">
+        
+        <!-- Coluna 1: A Fazer -->
+        <div class="kanban-column" id="todo">
+            <h2>A Fazer</h2>
+            <div class="task-list">
+                <div class="task" draggable="true">Aprovar orçamento de marketing</div>
+                <div class="task" draggable="true">Revisar código do robô</div>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Em Andamento -->
+        <div class="kanban-column" id="in-progress">
+            <h2>Em Andamento</h2>
+            <div class="task-list">
+                <div class="task" draggable="true">Desenvolver Quadro Kanban</div>
+            </div>
+        </div>
+
+        <!-- Coluna 3: Concluído -->
+        <div class="kanban-column" id="done">
+            <h2>Concluído</h2>
+            <div class="task-list">
+                <div class="task" draggable="true">Configurar GitHub do Portfólio</div>
+            </div>
+        </div>
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
